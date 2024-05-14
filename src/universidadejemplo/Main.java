@@ -36,7 +36,11 @@ public class Main {
               int dni=datos.getInt("a.dni");
               int nota=datos.getInt("nota");
                 System.out.println(" id: "+id+"\n nombre: "+nombre+ "\n apellido: "+apellido+"\n fecha: "+fecha+"\n dni: "+dni+ "\n nota: "+nota);
+                String borrar="UPDATE alumnos SET estado='0' WHERE id_alumnos=4";
+                 ps=con.prepareStatement(borrar);
+                 ps.executeUpdate();
                 
+          
             }
         } catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "Error al cargar el Driver");
